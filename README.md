@@ -45,8 +45,11 @@ R2 = 3000.
 R1 = 1000.
 Vout = Vref * (1.0 + R2 / R1)
 ```
-In order to set a specific output voltage, we start with *R1* within the recomended range(1k to 5k). When selecting an R1 value of 1 kOhm, the value for R2 needed for our desired 5 V output volatage can be determined as:
+In order to set a specific output voltage, we start with *R1* within the recomended range(1k to 5k). When selecting an R1 value of 1 kOhm, the value for R2 is calculated for our desired 5 V output as:
 ```python
+Vref = 1.23
+Vout = 5.0
+R1 = 1000.
 R2 = R1 * (Vout / Vref - 1.0)
 ```
 
